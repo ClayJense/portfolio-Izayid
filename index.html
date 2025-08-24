@@ -5,6 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Izayid Ali - Portfolio Enhanced</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Styles pour le menu mobile */
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1000;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+        
+        .mobile-menu-btn span {
+            width: 30px;
+            height: 3px;
+            background: var(--accent-blue);
+            margin: 3px 0;
+            transition: 0.4s;
+            border-radius: 2px;
+        }
+        
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+        
+        .nav-container {
+            display: flex;
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: flex;
+            }
+            
+            .nav-container {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                height: 100vh;
+                width: 70%;
+                max-width: 300px;
+                background: rgba(10, 15, 30, 0.95);
+                backdrop-filter: blur(10px);
+                flex-direction: column;
+                padding: 80px 20px 20px;
+                z-index: 999;
+                box-shadow: -5px 0 25px rgba(0, 0, 0, 0.5);
+                transition: right 0.3s ease-in-out;
+            }
+            
+            .nav-container.active {
+                right: 0;
+            }
+            
+            .nav-link {
+                padding: 15px;
+                margin: 10px 0;
+                border-radius: 8px;
+                text-align: center;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,8 +100,15 @@
     <div class="floating-particles" id="particles"></div>
     <div class="scroll-progress" id="scrollProgress"></div>
 
+    <!-- Bouton menu mobile -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
     <nav class="nav">
-        <div class="nav-container">
+        <div class="nav-container" id="navContainer">
             <a href="#accueil" class="nav-link active">Accueil</a>
             <a href="#apropos" class="nav-link">À propos</a>
             <a href="#competences" class="nav-link">Compétences</a>
@@ -31,6 +117,7 @@
         </div>
     </nav>
 
+    <!-- Le reste du code reste inchangé -->
     <!-- Hero Section Enhanced -->
     <section id="accueil" class="section hero">
         <div class="container">
@@ -471,6 +558,36 @@
     </section>
 
     <script>
+        // Gestion du menu mobile
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navContainer = document.getElementById('navContainer');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.classList.toggle('active');
+            navContainer.classList.toggle('active');
+            document.body.style.overflow = navContainer.classList.contains('active') ? 'hidden' : '';
+        });
+        
+        // Fermer le menu en cliquant sur un lien
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuBtn.classList.remove('active');
+                navContainer.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+        
+        // Fermer le menu en cliquant à l'extérieur
+        document.addEventListener('click', (e) => {
+            if (navContainer.classList.contains('active') && 
+                !navContainer.contains(e.target) && 
+                !mobileMenuBtn.contains(e.target)) {
+                mobileMenuBtn.classList.remove('active');
+                navContainer.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
         // Loading Screen
         window.addEventListener('load', () => {
             setTimeout(() => {
@@ -941,6 +1058,7 @@
         • Effet Matrix et particules de code
         • Animations 3D avancées
         • Design futuriste et moderne
+        • Menu responsive pour mobile
         
         🛠️ Technologies utilisées :
         • HTML5, CSS3, JavaScript
