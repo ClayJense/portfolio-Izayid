@@ -838,3 +838,284 @@
             opacity: 0.1;
             pointer-events: none;
         }
+
+
+    /* Styles pour le menu mobile */
+    .mobile-menu-btn {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 1000;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+    }
+    
+    .mobile-menu-btn span {
+        width: 30px;
+        height: 3px;
+        background: var(--accent-blue);
+        margin: 3px 0;
+        transition: 0.4s;
+        border-radius: 2px;
+    }
+    
+    .mobile-menu-btn.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .mobile-menu-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .mobile-menu-btn.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    .nav-container {
+        display: flex;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    /* Responsive Design Global */
+    @media (max-width: 1200px) {
+        .container {
+            padding: 0 2rem;
+        }
+        
+        .hero .container {
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .hero-content {
+            margin-bottom: 3rem;
+        }
+        
+        .about-content {
+            flex-direction: column;
+        }
+        
+        .about-text, .about-visual {
+            width: 100%;
+        }
+        
+        .about-visual {
+            margin-top: 3rem;
+        }
+    }
+    
+    @media (max-width: 992px) {
+        .skills-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        .projects-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .mobile-menu-btn {
+            display: flex;
+        }
+        
+        .nav-container {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            height: 100vh;
+            width: 70%;
+            max-width: 300px;
+            background: rgba(10, 15, 30, 0.95);
+            backdrop-filter: blur(10px);
+            flex-direction: column;
+            padding: 80px 20px 20px;
+            z-index: 999;
+            box-shadow: -5px 0 25px rgba(0, 0, 0, 0.5);
+            transition: right 0.3s ease-in-out;
+        }
+        
+        .nav-container.active {
+            right: 0;
+        }
+        
+        .nav-link {
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+        }
+        
+        .typing-text {
+            font-size: 1.3rem;
+        }
+        
+        .tech-stack {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .skills-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .projects-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .contact-form .form-group {
+            grid-template-columns: 1fr;
+        }
+        
+        .computer-animation {
+            transform: scale(0.8);
+        }
+        
+        .terminal-3d {
+            transform: scale(0.9);
+            overflow-x: auto;
+        }
+        
+        .terminal-line {
+            white-space: nowrap;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .container {
+            padding: 0 1rem;
+        }
+        
+        .hero h1 {
+            font-size: 2rem;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+        }
+        
+        .tech-icon img {
+            width: 30px !important;
+        }
+        
+        .social-links {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .social-link {
+            margin: 0.5rem;
+        }
+        
+        .hero-avatar {
+            transform: scale(0.8);
+        }
+        
+        .about-text > div {
+            flex-direction: column;
+        }
+        
+        .about-text > div > div {
+            margin-bottom: 1rem;
+            min-width: auto;
+        }
+        
+        .project-tech {
+            flex-wrap: wrap;
+        }
+        
+        .tech-tag {
+            margin-bottom: 0.5rem;
+        }
+    }
+    
+    /* Correction des problèmes de responsive */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .tech-stack {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .project-tech {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+    
+    .terminal-3d {
+        overflow-x: auto;
+        max-width: 100%;
+    }
+    
+    /* Amélioration de l'expérience mobile */
+    @media (max-width: 768px) {
+        .section {
+            padding: 3rem 0;
+        }
+        
+        .hero {
+            padding: 5rem 0 3rem;
+        }
+        
+        .code-line {
+            font-size: 0.9rem;
+        }
+        
+        .floating-code {
+            display: none; /* Masquer sur mobile pour améliorer les performances */
+        }
+        
+        .matrix-rain {
+            opacity: 0.3; /* Réduire l'opacité pour améliorer la lisibilité */
+        }
+    }
+    
+    /* Correction pour les très petits écrans */
+    @media (max-width: 400px) {
+        .hero-content p {
+            font-size: 1rem;
+        }
+        
+        .nav-container {
+            width: 85%;
+        }
+        
+        .tech-icon img {
+            width: 25px !important;
+        }
+    }
