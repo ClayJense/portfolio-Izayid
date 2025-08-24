@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Izayid Ali - Portfolio Enhanced</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">{ IA }</div>
+            <div class="loading-text">Chargement du portfolio...</div>
+        </div>
+    </div>
+
+    <div class="animated-bg"></div>
+    <div class="matrix-rain" id="matrixRain"></div>
+    <div class="floating-particles" id="particles"></div>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#accueil" class="nav-link active">Accueil</a>
+            <a href="#apropos" class="nav-link">À propos</a>
+            <a href="#competences" class="nav-link">Compétences</a>
+            <a href="#projets" class="nav-link">Projets</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section Enhanced -->
+    <section id="accueil" class="section hero">
+        <div class="container">
+            <div class="hero-avatar">
+                <div class="avatar-container">
+                    <div class="avatar-inner">
+                        👨‍💻
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-content">
+                <h1>Izayid Ali</h1>
+                <div class="typing-text">
+                    <span id="typedText">Développeur Backend Go</span><span class="cursor">|</span>
+                </div>
+                <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 2rem;">
+                    Passionné par Linux, DevOps et l'innovation technologique. 
+                    Je transforme des idées en solutions élégantes et performantes.
+                </p>
+                
+                <div class="tech-stack" style="display:flex; gap:15px; align-items:center;">
+                    <!-- Go -->
+                    <div class="tech-icon" title="Go/Golang">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/go.svg" 
+                            alt="Go/Golang" 
+                            style="width:40px; height:auto;" />
+                    </div>
+
+                    <!-- Docker -->
+                    <div class="tech-icon" title="Docker">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/docker.svg" 
+                            alt="Docker" 
+                            style="width:40px; height:auto;" />
+                    </div>
+
+                    <!-- Kubernetes -->
+                    <div class="tech-icon" title="Kubernetes">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/kubernetes.svg" 
+                            alt="Kubernetes" 
+                            style="width:40px; height:auto;" />
+                    </div>
+
+                    <!-- Linux -->
+                    <div class="tech-icon" title="Linux">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linux.svg" 
+                            alt="Linux" 
+                            style="width:40px; height:auto;" />
+                    </div>
+
+                    <!-- Angular -->
+                    <div class="tech-icon" title="Angular">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/angular.svg" 
+                            alt="Angular" 
+                            style="width:40px; height:auto;" />
+                    </div>
+
+                    <!-- Git -->
+                    <div class="tech-icon" title="Git">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/git.svg" 
+                            alt="Git" 
+                            style="width:40px; height:auto;" />
+                    </div>
+                </div>
+
+
+                <div class="social-links">
+                    <a href="https://github.com/izayidali" class="social-link" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/izayidali" class="social-link" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:izayid.ali@example.com" class="social-link" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://twitter.com/izayidali" class="social-link" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-background">
+                <div class="computer-animation">
+                    <div class="laptop">
+                        <div class="laptop-screen">
+                            <div class="code-lines" id="heroCode">
+                                <div class="code-line">package main</div>
+                                <div class="code-line">import "fmt"</div>
+                                <div class="code-line"></div>
+                                <div class="code-line">func main() {</div>
+                                <div class="code-line">  fmt.Println("Hello DevOps!")</div>
+                                <div class="code-line">  deployToProduction()</div>
+                                <div class="code-line">}</div>
+                                <div class="code-line"></div>
+                                <div class="code-line"># Docker Build</div>
+                                <div class="code-line">FROM golang:alpine</div>
+                                <div class="code-line">COPY . .</div>
+                                <div class="code-line">RUN go build -o app</div>
+                                <div class="code-line">CMD ["./app"]</div>
+                            </div>
+                        </div>
+                        <div class="laptop-base"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="apropos" class="section">
+        <div class="container">
+            <h2 class="section-title">À propos de moi</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p style="font-size: 1.3rem; margin-bottom: 2rem;">
+                        Salut ! Moi c'est Izayid, étudiant en L3 Génie Logiciel à l'UDB. 
+                        Mon parcours a commencé avec une curiosité pour Linux et s'est 
+                        transformé en passion pour l'écosystème DevOps.
+                    </p>
+                    <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+                        J'aime créer des solutions élégantes et performantes, que ce soit 
+                        avec Go pour le backend ou en orchestrant des infrastructures avec 
+                        Docker et Kubernetes. Pour moi, le code doit être à la fois 
+                        fonctionnel et beau.
+                    </p>
+                    <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+                        Quand je ne code pas, vous me trouverez probablement en train de 
+                        configurer un nouveau setup sur Pop!_OS ou d'explorer les dernières 
+                        tendances en automatisation et déploiement continu.
+                    </p>
+                    
+                    <div style="display: flex; gap: 1.5rem; margin-top: 3rem; flex-wrap: wrap;">
+                        <div style="text-align: center; padding: 1rem; background: var(--glass); border-radius: 15px; flex: 1; min-width: 150px;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎓</div>
+                            <div style="color: var(--accent-blue); font-weight: 600;">Formation</div>
+                            <div style="font-size: 0.9rem; color: var(--text-secondary);">L3 Génie Logiciel</div>
+                        </div>
+                        <div style="text-align: center; padding: 1rem; background: var(--glass); border-radius: 15px; flex: 1; min-width: 150px;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏆</div>
+                            <div style="color: var(--accent-green); font-weight: 600;">Certifications</div>
+                            <div style="font-size: 0.9rem; color: var(--text-secondary);">4+ Certifiées</div>
+                        </div>
+                        <div style="text-align: center; padding: 1rem; background: var(--glass); border-radius: 15px; flex: 1; min-width: 150px;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚡</div>
+                            <div style="color: var(--accent-orange); font-weight: 600;">Projets</div>
+                            <div style="font-size: 0.9rem; color: var(--text-secondary);">15+ Réalisés</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-visual">
+                    <div class="terminal-3d" id="terminal">
+                        <div class="terminal-header">
+                            <div class="terminal-btn btn-close"></div>
+                            <div class="terminal-btn btn-minimize"></div>
+                            <div class="terminal-btn btn-maximize"></div>
+                        </div>
+                        <div class="terminal-line">izayid@pop-os:~$ whoami</div>
+                        <div class="terminal-line">Izayid Ali - Developer & DevOps Enthusiast</div>
+                        <div class="terminal-line">izayid@pop-os:~$ cat skills.json</div>
+                        <div class="terminal-line">{</div>
+                        <div class="terminal-line">  "backend": ["Go", "Java", "PHP"],</div>
+                        <div class="terminal-line">  "devops": ["Docker", "K8s", "CI/CD"],</div>
+                        <div class="terminal-line">  "frontend": ["Angular", "JavaScript"],</div>
+                        <div class="terminal-line">  "os": "Pop!_OS 💜"</div>
+                        <div class="terminal-line">}</div>
+                        <div class="terminal-line">izayid@pop-os:~$ docker ps</div>
+                        <div class="terminal-line">CONTAINER ID   IMAGE         STATUS</div>
+                        <div class="terminal-line">abc123def456   go-api:v1.0   Up 2 hours</div>
+                        <div class="terminal-line">xyz789ghi012   postgres:13   Up 2 hours</div>
+                        <div class="terminal-line">izayid@pop-os:~$ echo "Ready to innovate!"</div>
+                        <div class="terminal-line">Ready to innovate!</div>
+                        <div class="terminal-line">izayid@pop-os:~$ <span style="animation: blink 1s infinite;">█</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="competences" class="section">
+        <div class="container">
+            <h2 class="section-title">Mes Compétences</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-icon">🚀</div>
+                    <h3>Développement Backend</h3>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Go (Golang)</span><span>92%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="92"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Java</span><span>85%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>PHP</span><span>78%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="78"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Python</span><span>80%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="80"></div></div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-icon">🎨</div>
+                    <h3>Développement Frontend</h3>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Angular</span><span>82%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="82"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>HTML/CSS</span><span>90%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="90"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>JavaScript</span><span>87%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="87"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>TypeScript</span><span>83%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="83"></div></div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-icon">🗄️</div>
+                    <h3>Bases de Données</h3>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>PostgreSQL</span><span>88%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="88"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>MySQL</span><span>85%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>MongoDB</span><span>75%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="75"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Redis</span><span>80%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="80"></div></div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-icon">⚙️</div>
+                    <h3>DevOps & Infrastructure</h3>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Docker</span><span>90%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="90"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Kubernetes</span><span>85%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>Linux (Pop!_OS)</span><span>95%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="95"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name"><span>CI/CD</span><span>88%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="88"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projets" class="section">
+        <div class="container">
+            <h2 class="section-title">Mes Projets</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-icon">🌐</div>
+                        <h3 class="project-title">API REST Microservices</h3>
+                        <p style="margin-bottom: 1.5rem; line-height: 1.6;">
+                            Architecture microservices complète développée en Go avec authentification JWT, 
+                            rate limiting et monitoring en temps réel. Déployée avec Docker Swarm pour 
+                            une scalabilité optimale.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Go</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">Prometheus</span>
+                        </div>
+                        <div style="margin-top: 1.5rem;">
+                            <a href="#" style="color: var(--accent-blue); text-decoration: none; font-weight: 600;">
+                                <i class="fab fa-github"></i> Voir le code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-icon">📊</div>
+                        <h3 class="project-title">Dashboard Analytics</h3>
+                        <p style="margin-bottom: 1.5rem; line-height: 1.6;">
+                            Interface d'administration moderne avec Angular, visualisation de données 
+                            en temps réel, gestion des utilisateurs et système de notifications push. 
+                            Design responsive et accessible.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Chart.js</span>
+                            <span class="tech-tag">Socket.io</span>
+                            <span class="tech-tag">SCSS</span>
+                        </div>
+                        <div style="margin-top: 1.5rem;">
+                            <a href="#" style="color: var(--accent-green); text-decoration: none; font-weight: 600; margin-right: 1rem;">
+                                <i class="fas fa-external-link-alt"></i> Demo Live
+                            </a>
+                            <a href="#" style="color: var(--accent-blue); text-decoration: none; font-weight: 600;">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-icon">🐳</div>
+                        <h3 class="project-title">Infrastructure DevOps</h3>
+                        <p style="margin-bottom: 1.5rem; line-height: 1.6;">
+                            Pipeline CI/CD complet avec Kubernetes, monitoring automatisé et déploiement 
+                            blue-green. Infrastructure as Code avec Terraform pour une gestion 
+                            déclarative complète.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Kubernetes</span>
+                            <span class="tech-tag">GitHub Actions</span>
+                            <span class="tech-tag">Terraform</span>
+                            <span class="tech-tag">Grafana</span>
+                            <span class="tech-tag">ArgoCD</span>
+                        </div>
+                        <div style="margin-top: 1.5rem;">
+                            <a href="#" style="color: var(--accent-purple); text-decoration: none; font-weight: 600;">
+                                <i class="fas fa-file-alt"></i> Documentation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-icon">🔐</div>
+                        <h3 class="project-title">Système d'Authentification</h3>
+                        <p style="margin-bottom: 1.5rem; line-height: 1.6;">
+                            Service d'authentification sécurisé avec OAuth 2.0, authentification à deux 
+                            facteurs et gestion fine des permissions. Support multi-tenant avec cache 
+                            Redis haute performance.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Go</span>
+                            <span class="tech-tag">JWT</span>
+                            <span class="tech-tag">OAuth 2.0</span>
+                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                        <div style="margin-top: 1.5rem;">
+                            <a href="#" style="color: var(--accent-orange); text-decoration: none; font-weight: 600; margin-right: 1rem;">
+                                <i class="fas fa-shield-alt"></i> Sécurité
+                            </a>
+                            <a href="#" style="color: var(--accent-blue); text-decoration: none; font-weight: 600;">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Restons Connectés</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center; margin-bottom: 3rem;">
+                <p style="font-size: 1.2rem; color: var(--text-secondary); line-height: 1.6;">
+                    Vous avez un projet en tête ? Une question technique ? Ou simplement envie de discuter 
+                    de technologie ? Je serais ravi d'échanger avec vous !
+                </p>
+            </div>
+            
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name" style="color: var(--accent-blue); font-weight: 600;">Votre nom</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" style="color: var(--accent-green); font-weight: 600;">Votre email</label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" style="color: var(--accent-purple); font-weight: 600;">Sujet</label>
+                        <input type="text" id="subject" name="subject" required placeholder="Collaboration, Question technique, etc.">
+                    </div>
+                    <div class="form-group">
+                        <label for="message" style="color: var(--accent-orange); font-weight: 600;">Votre message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Décrivez votre projet ou votre question..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Envoyer le message
+                    </button>
+                </form>
+            </div>
+                
+            <div style="text-align: center; margin-top: 3rem; padding-top: 3rem; border-top: 1px solid var(--glass-border);">
+                <p style="margin-bottom: 2rem; color: var(--text-secondary); font-size: 1.1rem;">
+                    Ou contactez-moi directement sur :
+                </p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; max-width: 600px; margin: 0 auto;">
+                    <a href="mailto:izayid.ali@example.com" style="color: var(--accent-blue); text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 0.8rem; padding: 1rem; background: var(--glass); border-radius: 15px; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <i class="fas fa-envelope" style="font-size: 1.2rem;"></i>
+                        <span style="font-weight: 600;">Email</span>
+                    </a>
+                    <a href="https://github.com/izayidali" style="color: var(--accent-green); text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 0.8rem; padding: 1rem; background: var(--glass); border-radius: 15px; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <i class="fab fa-github" style="font-size: 1.2rem;"></i>
+                        <span style="font-weight: 600;">GitHub</span>
+                    </a>
+                    <a href="https://linkedin.com/in/izayidali" style="color: var(--accent-purple); text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 0.8rem; padding: 1rem; background: var(--glass); border-radius: 15px; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <i class="fab fa-linkedin" style="font-size: 1.2rem;"></i>
+                        <span style="font-weight: 600;">LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Loading Screen
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loadingScreen').style.opacity = '0';
+                setTimeout(() => {
+                    document.getElementById('loadingScreen').style.display = 'none';
+                }, 500);
+            }, 2000);
+        });
+
+        // Typing Animation
+        const texts = [
+            "Développeur Backend Go",
+            "Passionné de DevOps", 
+            "Expert Linux & Docker",
+            "Créateur de solutions",
+            "Architecte Cloud"
+        ];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typedElement = document.getElementById('typedText');
+
+        function typeText() {
+            const currentText = texts[textIndex];
+            
+            if (isDeleting) {
+                typedElement.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typedElement.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 50 : 100;
+
+            if (!isDeleting && charIndex === currentText.length) {
+                typeSpeed = 2000;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(typeText, typeSpeed);
+        }
+
+        // Start typing animation
+        typeText();
+
+        // Enhanced Particles with Programming Symbols
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const symbols = ['{ }', '< />', '( )', '[ ]', '&&', '||', '=>', '===', '!==', '++', '--', 'fn', 'var', 'let', 'const'];
+            
+            function addParticle() {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+                particle.style.left = Math.random() * 100 + 'vw';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = (Math.random() * 8 + 8) + 's';
+                
+                const colors = ['var(--accent-blue)', 'var(--accent-green)', 'var(--accent-purple)', 'var(--accent-orange)'];
+                particle.style.color = colors[Math.floor(Math.random() * colors.length)];
+                
+                particlesContainer.appendChild(particle);
+                
+                setTimeout(() => {
+                    if (particlesContainer.contains(particle)) {
+                        particlesContainer.removeChild(particle);
+                    }
+                }, 16000);
+            }
+            
+            for (let i = 0; i < 15; i++) {
+                setTimeout(addParticle, i * 800);
+            }
+            
+            setInterval(addParticle, 3000);
+        }
+
+        // Matrix Rain Effect
+        function createMatrixRain() {
+            const matrixContainer = document.getElementById('matrixRain');
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            matrixContainer.appendChild(canvas);
+
+            const matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}";
+            const matrixArray = matrix.split("");
+
+            const fontSize = 10;
+            const columns = canvas.width / fontSize;
+            const drops = [];
+
+            for (let x = 0; x < columns; x++) {
+                drops[x] = 1;
+            }
+
+            function drawMatrix() {
+                ctx.fillStyle = 'rgba(10, 10, 15, 0.04)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                ctx.fillStyle = '#00d4ff';
+                ctx.font = fontSize + 'px monospace';
+
+                for (let i = 0; i < drops.length; i++) {
+                    const text = matrixArray[Math.floor(Math.random() * matrixArray.length)];
+                    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                    if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                        drops[i] = 0;
+                    }
+                    drops[i]++;
+                }
+            }
+
+            setInterval(drawMatrix, 35);
+        }
+
+        // Hero Code Animation
+        function animateHeroCode() {
+            const codeLines = document.querySelectorAll('#heroCode .code-line');
+            codeLines.forEach((line, index) => {
+                setTimeout(() => {
+                    line.style.animationDelay = '0s';
+                    line.style.opacity = '1';
+                    line.style.width = '100%';
+                }, index * 300 + 1000);
+            });
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    
+                    if (entry.target.id === 'competences') {
+                        const skillBars = entry.target.querySelectorAll('.skill-progress');
+                        skillBars.forEach((bar, index) => {
+                            const width = bar.getAttribute('data-width');
+                            setTimeout(() => {
+                                bar.style.width = width + '%';
+                            }, index * 150 + 300);
+                        });
+                    }
+
+                    if (entry.target.id === 'apropos') {
+                        const terminalLines = entry.target.querySelectorAll('.terminal-line');
+                        terminalLines.forEach((line, index) => {
+                            setTimeout(() => {
+                                line.style.animationDelay = '0s';
+                            }, index * 200);
+                        });
+                    }
+
+                    if (entry.target.id === 'accueil') {
+                        animateHeroCode();
+                    }
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Smooth scrolling navigation
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Update scroll progress and active nav
+        window.addEventListener('scroll', () => {
+            const scrollTop = document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercent = (scrollTop / scrollHeight) * 100;
+            document.getElementById('scrollProgress').style.width = scrollPercent + '%';
+
+            const sections = document.querySelectorAll('.section');
+            const scrollPos = window.scrollY + 100;
+
+            sections.forEach(section => {
+                const top = section.offsetTop;
+                const bottom = top + section.offsetHeight;
+                const id = section.getAttribute('id');
+
+                if (scrollPos >= top && scrollPos < bottom) {
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === '#' + id) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        });
+
+        // Contact form
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const btn = e.target.querySelector('.submit-btn');
+            const originalHTML = btn.innerHTML;
+            
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
+            btn.disabled = true;
+            btn.style.opacity = '0.7';
+            
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fas fa-check"></i> Message envoyé !';
+                btn.style.background = 'linear-gradient(135deg, var(--accent-green), var(--accent-blue))';
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalHTML;
+                    btn.disabled = false;
+                    btn.style.opacity = '1';
+                    btn.style.background = 'linear-gradient(135deg, var(--accent-blue), var(--accent-green))';
+                    e.target.reset();
+                }, 3000);
+            }, 2000);
+        });
+
+        // Project cards 3D hover effect
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('mousemove', function(e) {
+                const rect = this.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = (y - centerY) / 10;
+                const rotateY = (centerX - x) / 10;
+                
+                this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(10px)`;
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0px)';
+            });
+        });
+
+        // Floating elements animation
+        function addFloatingCode() {
+            const codes = [
+                'func main()',
+                'docker run',
+                'kubectl apply',
+                'git commit',
+                'npm install',
+                'go build',
+                '=> {}',
+                'const app',
+                'async/await',
+                'SELECT *',
+                'FROM users',
+                'WHERE id',
+                'docker-compose up',
+                'helm install'
+            ];
+
+            function createFloatingCode() {
+                const element = document.createElement('div');
+                element.className = 'floating-code';
+                element.textContent = codes[Math.floor(Math.random() * codes.length)];
+                element.style.left = Math.random() * 100 + 'vw';
+                element.style.fontSize = (Math.random() * 6 + 10) + 'px';
+                
+                document.body.appendChild(element);
+                
+                setTimeout(() => {
+                    if (document.body.contains(element)) {
+                        document.body.removeChild(element);
+                    }
+                }, 15000);
+            }
+
+            setInterval(createFloatingCode, 4000);
+        }
+
+        // Tech stack icons animation
+        document.querySelectorAll('.tech-icon').forEach((icon, index) => {
+            setTimeout(() => {
+                icon.style.animation = 'fadeInUp 0.8s ease forwards';
+                icon.style.opacity = '1';
+                icon.style.transform = 'translateY(0)';
+            }, index * 150 + 500);
+        });
+
+        // Skills section enhanced animation
+        const skillsSection = document.getElementById('competences');
+        const skillCategories = skillsSection.querySelectorAll('.skill-category');
+        
+        const skillsObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0) rotateX(0deg)';
+                    }, index * 200);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        skillCategories.forEach((category, index) => {
+            category.style.opacity = '0';
+            category.style.transform = 'translateY(50px) rotateX(10deg)';
+            category.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+            skillsObserver.observe(category);
+        });
+
+        // Projects section staggered animation
+        const projectCards = document.querySelectorAll('.project-card');
+        const projectsObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0) scale(1)';
+                    }, index * 150);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        projectCards.forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px) scale(0.9)';
+            card.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+            projectsObserver.observe(card);
+        });
+
+        // Parallax effect for background
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const bg = document.querySelector('.animated-bg');
+            const rate = scrolled * -0.3;
+            bg.style.transform = `translateY(${rate}px)`;
+        });
+
+        // Initialize everything
+        document.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+            createMatrixRain();
+            addFloatingCode();
+            
+            // Add some initial tech icons animation
+            const techIcons = document.querySelectorAll('.tech-icon');
+            techIcons.forEach((icon, index) => {
+                icon.style.opacity = '0';
+                icon.style.transform = 'translateY(20px)';
+            });
+        });
+
+        // Smooth reveal for all elements on page load
+        window.addEventListener('load', () => {
+            const allElements = document.querySelectorAll('.section, .nav, .tech-icon');
+            allElements.forEach((element, index) => {
+                element.style.animationDelay = (index * 50) + 'ms';
+            });
+        });
+
+        // Enhanced cursor trail effect
+        let trail = [];
+        document.addEventListener('mousemove', (e) => {
+            trail.push({
+                x: e.clientX,
+                y: e.clientY,
+                time: Date.now()
+            });
+
+            trail = trail.filter(point => Date.now() - point.time < 500);
+
+            if (Math.random() < 0.3) {
+                const dot = document.createElement('div');
+                dot.style.cssText = `
+                    position: fixed;
+                    left: ${e.clientX}px;
+                    top: ${e.clientY}px;
+                    width: 3px;
+                    height: 3px;
+                    background: var(--accent-blue);
+                    border-radius: 50%;
+                    pointer-events: none;
+                    z-index: 1000;
+                    opacity: 0.6;
+                    animation: trailFade 0.8s ease forwards;
+                `;
+                
+                document.body.appendChild(dot);
+                
+                setTimeout(() => {
+                    if (document.body.contains(dot)) {
+                        document.body.removeChild(dot);
+                    }
+                }, 800);
+            }
+        });
+
+        // Add trail fade animation
+        const trailStyle = document.createElement('style');
+        trailStyle.textContent = `
+            @keyframes trailFade {
+                0% { opacity: 0.6; transform: scale(1); }
+                100% { opacity: 0; transform: scale(0.5); }
+            }
+            @keyframes fadeInUp {
+                0% { opacity: 0; transform: translateY(30px); }
+                100% { opacity: 1; transform: translateY(0); }
+            }
+        `;
+        document.head.appendChild(trailStyle);
+
+        // Dynamic background color based on scroll
+        window.addEventListener('scroll', () => {
+            const scrollPercent = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+            const bg = document.querySelector('.animated-bg');
+            
+            // Change background hue based on scroll position
+            const hue = scrollPercent * 60; // 0 to 60 degrees
+            bg.style.filter = `hue-rotate(${hue}deg) brightness(${1 + scrollPercent * 0.1})`;
+        });
+
+        // Add interactive elements for better UX
+        document.querySelectorAll('.social-link, .nav-link, .tech-icon, .project-card').forEach(element => {
+            element.addEventListener('mouseenter', () => {
+                document.body.style.cursor = 'pointer';
+            });
+            
+            element.addEventListener('mouseleave', () => {
+                document.body.style.cursor = 'default';
+            });
+        });
+
+        // Console message for developers
+        console.log(`
+        🚀 Portfolio d'Izayid Ali - Version Enhanced
+        
+        ✨ Nouvelles fonctionnalités :
+        • Animations d'ordinateur et avatar personnalisé
+        • Vrais icônes Font Awesome
+        • Effet Matrix et particules de code
+        • Animations 3D avancées
+        • Design futuriste et moderne
+        
+        🛠️ Technologies utilisées :
+        • HTML5, CSS3, JavaScript
+        • Font Awesome Icons
+        • Animations CSS et JavaScript
+        • Design responsive
+        
+        💫 Développé avec passion par Izayid Ali
+        Contact: izayid.ali@example.com
+        `);
+    </script>
+</body>
+</html>
