@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Izayid Ali - Portfolio Enhanced</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='10' fill='%230c0c0c'/><text x='10' y='35' font-size='25' fill='%234FC3F7' font-family='monospace'>$</text><rect x='25' y='20' width='4' height='20' fill='%234FC3F7'/><text x='10' y='70' font-size='20' fill='%234FC3F7' font-family='monospace'>izayid</text></svg>">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/alert_contact.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">{ IA }</div>
+            <div class="loading-text">Chargement du portfolio...</div>
+        </div>
+    </div>
+
+    <div class="animated-bg"></div>
+    <div class="matrix-rain" id="matrixRain"></div>
+    <div class="floating-particles" id="particles"></div>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Bouton menu mobile -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav class="nav">
+        <div class="nav-container" id="navContainer">
+            <a href="#accueil" class="nav-link active">Accueil</a>
+            <a href="#apropos" class="nav-link">À propos</a>
+            <a href="#competences" class="nav-link">Compétences</a>
+            <a href="#certifications" class="nav-link">Certifications</a>
+            <a href="#projets" class="nav-link">Projets</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section Enhanced -->
+    <section id="accueil" class="section hero">
+  
+    
+    <div class="container">
+        <div class="hero-avatar">
+            <div class="avatar-container">
+                <div class="avatar-inner">
+                    <img src="./images/images1.png" 
+                        alt="Izayid Ali" 
+                        style="width: 100%; height: 100%; border-radius: 50%;">
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-content">
+            <h1>Izayid Ali</h1>
+            <div class="typing-text">
+                <span id="typedText">Développeur Backend Go</span><span class="cursor">|</span>
+            </div>
+            <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 2rem;">
+                Passionné par Linux, DevOps et l'innovation technologique. 
+                Je transforme des idées en solutions élégantes et performantes.
+            </p>
+            
+            <!-- Boutons CTA -->
+            <div class="cta-buttons">
+                <a href="./cv/Izayid_Ali_CV.pdf" download class="btn-cv">
+                    <i class="fas fa-download"></i>
+                    Télécharger CV
+                </a>
+                <a href="#contact" class="btn-secondary">
+                    <i class="fas fa-envelope"></i>
+                    Me Contacter
+                </a>
+            </div>
+            
+            <div class="tech-stack" style="display:flex; gap:15px; align-items:center;">
+                <!-- Go -->
+                <div class="tech-icon" title="Go/Golang">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/go.svg" 
+                        alt="Go/Golang" 
+                        style="width:40px; height:auto;" />
+                </div>
+
+                <!-- Docker -->
+                <div class="tech-icon" title="Docker">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/docker.svg" 
+                        alt="Docker" 
+                        style="width:40px; height:auto;" />
+                </div>
+
+                <!-- Kubernetes -->
+                <div class="tech-icon" title="Kubernetes">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/kubernetes.svg" 
+                        alt="Kubernetes" 
+                        style="width:40px; height:auto;" />
+                </div>
+
+                <!-- Linux -->
+                <div class="tech-icon" title="Linux">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linux.svg" 
+                        alt="Linux" 
+                        style="width:40px; height:auto;" />
+                </div>
+
+                <!-- Angular -->
+                <div class="tech-icon" title="Angular">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/angular.svg" 
+                        alt="Angular" 
+                        style="width:40px; height:auto;" />
+                </div>
+
+                <!-- Git -->
+                <div class="tech-icon" title="Git">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/git.svg" 
+                        alt="Git" 
+                        style="width:40px; height:auto;" />
+                </div>
+            </div>
+
+            <div class="social-links">
+                <a href="https://github.com/izayidali" class="social-link" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/izayidali" class="social-link" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:izayid.ali@example.com" class="social-link" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://twitter.com/izayidali" class="social-link" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-background">
+            <div class="computer-animation">
+                <div class="laptop">
+                    <div class="laptop-screen">
+                        <div class="code-lines" id="heroCode">
+                            <div class="code-line">package main</div>
+                            <div class="code-line">import "fmt"</div>
+                            <div class="code-line"></div>
+                            <div class="code-line">func main() {</div>
+                            <div class="code-line">  fmt.Println("Hello DevOps!")</div>
+                            <div class="code-line">  deployToProduction()</div>
+                            <div class="code-line">}</div>
+                            <div class="code-line"></div>
+                            <div class="code-line"># Docker Build</div>
+                            <div class="code-line">FROM golang:alpine</div>
+                            <div class="code-line">COPY . .</div>
+                            <div class="code-line">RUN go build -o app</div>
+                            <div class="code-line">CMD ["./app"]</div>
+                        </div>
+                    </div>
+                    <div class="laptop-base"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- About Section -->
+    <section id="apropos" class="section">
+        <div class="container">
+            <h2 class="section-title">À propos de moi</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p style="font-size: 1.3rem; margin-bottom: 2rem;">
+                        Salut ! Moi c'est Izayid, étudiant en L3 Génie Logiciel à l'UDB. 
+                        Mon parcours a commencé avec une curiosité pour Linux et s'est 
+                        transformé en passion pour l'écosystème DevOps.
+                    </p>
+                    <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+                        Je suis un développeur fullstack : j'aime créer des solutions élégantes 
+                        et performantes, que ce soit avec Go pour le backend, Laravel, ou en 
+                        développant des interfaces interactives avec Angular et React. Pour moi, 
+                        le code doit être à la fois fonctionnel et beau.
+                    </p>
+                    <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+                        Quand je ne code pas, vous me trouverez probablement en train de 
+                        configurer un nouveau setup sur Pop!_OS ou d'explorer les dernières 
+                        tendances en automatisation, déploiement continu et DevOps.
+                    </p>
+
+                    
+                    <div style="display: flex; gap: 1.5rem; margin-top: 3rem; flex-wrap: wrap;">
+                        <!-- Formation -->
+                        <div style="text-align: center; padding: 1.5rem; background: var(--glass); border-radius: 15px; flex: 1; min-width: 150px; transition: all 0.3s ease; border: 1px solid var(--glass-border);" 
+                            onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(79, 195, 247, 0.3)'" 
+                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                            <div style="margin-bottom: 0.8rem;">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 14L21 9L12 4L3 9L12 14Z" fill="#4FC3F7" stroke="#4FC3F7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12 14L21 9V16C21 16.5304 20.7893 17.0391 20.4142 17.4142C20.0391 17.7893 19.5304 18 19 18H5C4.46957 18 3.96086 17.7893 3.58579 17.4142C3.21071 17.0391 3 16.5304 3 16V9L12 14Z" fill="#4FC3F7" opacity="0.3"/>
+                                    <path d="M7 11.5V16.5C7 16.5 9 18.5 12 18.5C15 18.5 17 16.5 17 16.5V11.5" stroke="#4FC3F7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div style="color: var(--accent-blue); font-weight: 600; font-size: 1.1rem; margin-bottom: 0.3rem;">Formation</div>
+                            <div style="font-size: 0.9rem; color: var(--text-secondary);">L3 Génie Logiciel</div>
+                        </div>
+                        
+                        <!-- Certifications -->
+                        <div style="text-align: center; padding: 1.5rem; background: var(--glass); border-radius: 15px; flex: 1; min-width: 150px; transition: all 0.3s ease; border: 1px solid var(--glass-border);" 
+                            onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(79, 195, 247, 0.3)'" 
+                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                            <div style="margin-bottom: 0.8rem;">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#4FC3F7" stroke="#4FC3F7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <circle cx="12" cy="12" r="3" fill="#1E1E2E"/>
+                                    <path d="M12 9V12L14 14" stroke="#4FC3F7" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div style="color: var(--accent-green); font-weight: 600; font-size: 1.1rem; margin-bottom: 0.3rem;">Certifications</div>
+                            <div style="font-size: 0.9rem; color: var(--text-secondary);">6+ Certifiées</div>
+                        </div>
+                        
+                        <!-- Projets -->
+                        <div style="text-align: center; padding: 1.5rem; background: var(--glass); border-radius: 15px; flex: 1; min-width: 150px; transition: all 0.3s ease; border: 1px solid var(--glass-border);" 
+                            onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(79, 195, 247, 0.3)'" 
+                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                            <div style="margin-bottom: 0.8rem;">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" fill="#4FC3F7" opacity="0.3"/>
+                                    <path d="M9 9L11 11L9 13" stroke="#4FC3F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M13 13H15" stroke="#4FC3F7" stroke-width="2" stroke-linecap="round"/>
+                                    <rect x="3" y="3" width="18" height="18" rx="2" stroke="#4FC3F7" stroke-width="1.5"/>
+                                    <circle cx="17" cy="7" r="2" fill="#FFD54F"/>
+                                    <path d="M17 5V9M15 7H19" stroke="#1E1E2E" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div style="color: var(--accent-orange); font-weight: 600; font-size: 1.1rem; margin-bottom: 0.3rem;">Projets</div>
+                            <div style="font-size: 0.9rem; color: var(--text-secondary);">15+ Réalisés</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-visual">
+                    <div class="terminal-3d" id="terminal">
+                        <div class="terminal-header">
+                            <div class="terminal-btn btn-close"></div>
+                            <div class="terminal-btn btn-minimize"></div>
+                            <div class="terminal-btn btn-maximize"></div>
+                        </div>
+                        <div class="terminal-line">izayid@pop-os:~$ whoami</div>
+                        <div class="terminal-line">Izayid Ali - Developer & DevOps Enthusiast</div>
+                        <div class="terminal-line">izayid@pop-os:~$ cat skills.json</div>
+                        <div class="terminal-line">{</div>
+                        <div class="terminal-line">  "backend": ["Go", "Java", "PHP"],</div>
+                        <div class="terminal-line">  "devops": ["Docker", "K8s", "CI/CD"],</div>
+                        <div class="terminal-line">  "frontend": ["Angular", "JavaScript"],</div>
+                        <div class="terminal-line">  "os": "Pop!_OS 💜"</div>
+                        <div class="terminal-line">}</div>
+                        <div class="terminal-line">izayid@pop-os:~$ docker ps</div>
+                        <div class="terminal-line">CONTAINER ID   IMAGE         STATUS</div>
+                        <div class="terminal-line">abc123def456   go-api:v1.0   Up 2 hours</div>
+                        <div class="terminal-line">xyz789ghi012   postgres:13   Up 2 hours</div>
+                        <div class="terminal-line">izayid@pop-os:~$ echo "Ready to innovate!"</div>
+                        <div class="terminal-line">Ready to innovate!</div>
+                        <div class="terminal-line">izayid@pop-os:~$ <span style="animation: blink 1s infinite;">█</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="competences" class="section">
+    <div class="container">
+        <h2 class="section-title">Mes Compétences</h2>
+        <div class="skills-grid">
+            <!-- Backend Development -->
+            <div class="skill-category">
+                <div class="skill-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 6H20M4 12H20M4 18H20" stroke="#4FC3F7" stroke-width="2" stroke-linecap="round"/>
+                        <circle cx="12" cy="12" r="8" stroke="#4FC3F7" stroke-width="1.5" fill="none"/>
+                        <path d="M12 8V16M8 12H16" stroke="#4FC3F7" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3>Développement Backend</h3>
+                
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span style="display: flex; align-items: center; gap: 8px;">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/go.svg" style="width: 20px; height: 20px; filter: brightness(0) saturate(100%) invert(73%) sepia(35%) saturate(1642%) hue-rotate(157deg) brightness(95%) contrast(94%);" alt="Go">
+                            Go + Gin
+                        </span>
+                        <span>88%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-width="88"></div></div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span style="display: flex; align-items: center; gap: 8px;">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/laravel.svg" style="width: 20px; height: 20px; filter: brightness(0) saturate(100%) invert(73%) sepia(35%) saturate(1642%) hue-rotate(157deg) brightness(95%) contrast(94%);" alt="Laravel">
+                            Laravel
+                        </span>
+                        <span>92%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-width="92"></div></div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span style="display: flex; align-items: center; gap: 8px;">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/openjdk.svg" style="width: 20px; height: 20px; filter: brightness(0) saturate(100%) invert(73%) sepia(35%) saturate(1642%) hue-rotate(157deg) brightness(95%) contrast(94%);" alt="Java">
+                            Java + Hibernate
+                        </span>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span style="display: flex; align-items: center; gap: 8px;">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/php.svg" style="width: 20px; height: 20px; filter: brightness(0) saturate(100%) invert(73%) sepia(35%) saturate(1642%) hue-rotate(157deg) brightness(95%) contrast(94%);" alt="PHP">
+                            PHP
+                        </span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-width="80"></div></div>
+                </div>
+            </div>
+
+            <!-- Frontend Development -->
+            <div class="skill-category">
+                <div class="skill-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="3" y="3" width="18" height="18" rx="2" stroke="#4FC3F7" stroke-width="1.5" fill="none"/>
+                        <path d="M7 7H17M7 11H13M7 15H15" stroke="#4FC3F7" stroke-width="1.5" stroke-linecap="round"/>
+                        <circle cx="17" cy="15" r="2" fill="#4FC3F7"/>
+                    </svg>
+                </div>
+                <h3>Développement Frontend</h3>
+                
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span style="display: flex; align-items: center; gap: 8px;">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/angular.svg" style="width: 20px; height: 20px; filter: brightness(0) saturate(100%) invert(73%) sepia(35%) saturate(1642%) hue-rotate(157deg) brightness(95%) contrast(94%);" alt="Angular">
+                            Angular
+                        </span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-width="90"></div></div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span style="display: flex; align-items: center; gap: 8px;">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/react.svg" style="width: 20px; height: 20px; filter: brightness(0) saturate(100%) invert(73%) sepia(35%) saturate(1642%) hue-rotate(157deg) brightness(95%) contrast(94%);" alt="React">
+                            React
+                        </span>
+                        <span>75%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-width="75"></div></div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span style="display: flex; align-items: center; gap: 8px;">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/javascript.svg" style="width: 20px; height: 20px; filter: brightness(0) saturate(100%) invert(73%) sepia(35%) saturate(1642%) hue-rotate(157deg) brightness(95%) contrast(94%);" alt="JavaScript">
+                            JavaScript
+                        </span>
+                        <span>87%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-width="87"></div></div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span style="display: flex; align-items: center; gap: 8px;">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/typescript.svg" style="width: 20px; height: 20px; filter: brightness(0) saturate(100%) invert(73%) sepia(35%) saturate(1642%) hue-rotate(157deg) brightness(95%) contrast(94%);" alt="TypeScript">
+                            TypeScript
+                        </span>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
+                </div>
+            </div>
+
+            <!-- Databases -->
+            <div class="skill-category">
+                <div class="skill-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="12" cy="6" rx="8" ry="3" stroke="#4FC3F7" stroke-width="1.5" fill="none"/>
+                        <path d="M4 6V18C4 19.6569 7.58172 21 12 21C16.4183 21 20 19.6569 20 18V6" stroke="#4FC3F7" stroke-width="1.5"/>
+                        <path d="M4 12C4 13.6569 7.58172 15 12 15C16.4183 15 20 13.6569 20 12" stroke="#4FC3F7" stroke-width="1.5"/>
+                    </svg>
+                </div>
+                <h3>Bases de Données</h3>
+                
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span style="display: flex; align-items: center; gap: 8px;">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/postgresql.svg" style="width: 20px; height: 20px; filter: brightness(0) saturate(100%) invert(73%) sepia(35%) saturate(1642%) hue-rotate(157deg) brightness(95%) contrast(94%);" alt="PostgreSQL">
+                            PostgreSQL
+                        </span>
+                        <span>88%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-width="88"></div></div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span style="display: flex; align-items: center; gap: 8px;">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/oracle.svg" style="width: 20px; height: 20px; filter: brightness(0) saturate(100%) invert(73%) sepia(35%) saturate(1642%) hue-rotate(157deg) brightness(95%) contrast(94%);" alt="Oracle">
+                            Oracle
+                        </span>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span style="display: flex; align-items: center; gap: 8px;">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/microsoftsqlserver.svg" style="width: 20px; height: 20px; filter: brightness(0) saturate(100%) invert(73%) sepia(35%) saturate(1642%) hue-rotate(157deg) brightness(95%) contrast(94%);" alt="SQL Server">
+                            SQL Server
+                        </span>
+                        <span>82%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-width="82"></div></div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span style="display: flex; align-items: center; gap: 8px;">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/mysql.svg" style="width: 20px; height: 20px; filter: brightness(0) saturate(100%) invert(73%) sepia(35%) saturate(1642%) hue-rotate(157deg) brightness(95%) contrast(94%);" alt="MySQL">
+                            MySQL
+                        </span>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
+                </div>
+            </div>
+
+            <!-- DevOps & Infrastructure -->
+            <div class="skill-category">
+                <div class="skill-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="9" stroke="#4FC3F7" stroke-width="1.5" fill="none"/>
+                        <path d="M12 3V12L17 17" stroke="#4FC3F7" stroke-width="1.5" stroke-linecap="round"/>
+                        <circle cx="12" cy="12" r="2" fill="#4FC3F7"/>
+                        <path d="M12 3C7.5 3 3 7.5 3 12C3 16.5 7.5 21 12 21" stroke="#4FC3F7" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 2"/>
+                    </svg>
+                </div>
+                <h3>DevOps & Infrastructure</h3>
+                
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span style="display: flex; align-items: center; gap: 8px;">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/docker.svg" style="width: 20px; height: 20px; filter: brightness(0) saturate(100%) invert(73%) sepia(35%) saturate(1642%) hue-rotate(157deg) brightness(95%) contrast(94%);" alt="Docker">
+                            Docker
+                        </span>
+                        <span>92%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-width="92"></div></div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span style="display: flex; align-items: center; gap: 8px;">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/kubernetes.svg" style="width: 20px; height: 20px; filter: brightness(0) saturate(100%) invert(73%) sepia(35%) saturate(1642%) hue-rotate(157deg) brightness(95%) contrast(94%);" alt="Kubernetes">
+                            Kubernetes
+                        </span>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span style="display: flex; align-items: center; gap: 8px;">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linux.svg" style="width: 20px; height: 20px; filter: brightness(0) saturate(100%) invert(73%) sepia(35%) saturate(1642%) hue-rotate(157deg) brightness(95%) contrast(94%);" alt="Linux">
+                            Linux (Pop!_OS)
+                        </span>
+                        <span>95%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-width="95"></div></div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span style="display: flex; align-items: center; gap: 8px;">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/git.svg" style="width: 20px; height: 20px; filter: brightness(0) saturate(100%) invert(73%) sepia(35%) saturate(1642%) hue-rotate(157deg) brightness(95%) contrast(94%);" alt="Git">
+                            CI/CD & Git
+                        </span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-progress" data-width="90"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Amélioration pour les logos de compétences */
+.skill-name span:first-child {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.skill-name img {
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover .skill-name img {
+    transform: scale(1.2) rotate(5deg);
+}
+</style>
+
+    <section id="certifications" class="section">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <p class="section-subtitle">Mes certifications professionnelles et validations de compétences</p>
+
+            <div class="certifications-grid">
+            <!-- Certification 1 -->
+            <div class="cert-card" onclick="openCertModal('cert1')">
+                <img src="./images/cert-docker.jpg" alt="Docker Certified" class="cert-image">
+                <div class="cert-content">
+                    <h3 class="cert-title">Docker Certified Associate</h3>
+                    <p class="cert-issuer">Docker Inc.</p>
+                    <p class="cert-date"><i class="far fa-calendar"></i> Mars 2024</p>
+                </div>
+            </div>
+
+            <!-- Certification 2 -->
+            <div class="cert-card" onclick="openCertModal('cert2')">
+                <img src="./images/cert-kubernetes.jpg" alt="CKA" class="cert-image">
+                <div class="cert-content">
+                    <h3 class="cert-title">Certified Kubernetes Admin</h3>
+                    <p class="cert-issuer">CNCF</p>
+                    <p class="cert-date"><i class="far fa-calendar"></i> Janvier 2024</p>
+                </div>
+            </div>
+
+            <!-- Certification 3 -->
+            <div class="cert-card" onclick="openCertModal('cert3')">
+                <img src="./images/cert-golang.jpg" alt="Go Expert" class="cert-image">
+                <div class="cert-content">
+                    <h3 class="cert-title">Go Programming Expert</h3>
+                    <p class="cert-issuer">Go Community</p>
+                    <p class="cert-date"><i class="far fa-calendar"></i> Décembre 2023</p>
+                </div>
+            </div>
+
+            <!-- Certification 4 -->
+            <div class="cert-card" onclick="openCertModal('cert4')">
+                <img src="./images/cert-linux.jpg" alt="LPI" class="cert-image">
+                <div class="cert-content">
+                    <h3 class="cert-title">Linux Professional Institute</h3>
+                    <p class="cert-issuer">LPI</p>
+                    <p class="cert-date"><i class="far fa-calendar"></i> Octobre 2023</p>
+                </div>
+            </div>
+
+            <!-- Certification 5 -->
+            <div class="cert-card" onclick="openCertModal('cert5')">
+                <img src="./images/cert-aws.jpg" alt="AWS" class="cert-image">
+                <div class="cert-content">
+                    <h3 class="cert-title">AWS Solutions Architect</h3>
+                    <p class="cert-issuer">Amazon Web Services</p>
+                    <p class="cert-date"><i class="far fa-calendar"></i> Septembre 2023</p>
+                </div>
+            </div>
+
+            <!-- Certification 6 -->
+            <div class="cert-card" onclick="openCertModal('cert6')">
+                <img src="./images/cert-gitops.jpg" alt="GitOps" class="cert-image">
+                <div class="cert-content">
+                    <h3 class="cert-title">GitOps Fundamentals</h3>
+                    <p class="cert-issuer">GitLab</p>
+                    <p class="cert-date"><i class="far fa-calendar"></i> Août 2023</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <div id="certModal" class="cert-modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeCertModal()">&times;</span>
+            <div id="certModalBody"></div>
+        </div>
+    </div>
+
+
+    <!-- Projects Section -->
+    <section id="projets" class="section">
+        <div class="container">
+            <h2 class="section-title">Mes Projets</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-icon">🌐</div>
+                        <h3 class="project-title">API REST Microservices</h3>
+                        <p style="margin-bottom: 1.5rem; line-height: 1.6;">
+                            Architecture microservices complète développée en Go avec authentification JWT, 
+                            rate limiting et monitoring en temps réel. Déployée avec Docker Swarm pour 
+                            une scalabilité optimale.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Go</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">Prometheus</span>
+                        </div>
+                        <div style="margin-top: 1.5rem;">
+                            <a href="#" style="color: var(--accent-blue); text-decoration: none; font-weight: 600;">
+                                <i class="fab fa-github"></i> Voir le code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-icon">📊</div>
+                        <h3 class="project-title">Dashboard Analytics</h3>
+                        <p style="margin-bottom: 1.5rem; line-height: 1.6;">
+                            Interface d'administration moderne avec Angular, visualisation de données 
+                            en temps réel, gestion des utilisateurs et système de notifications push. 
+                            Design responsive et accessible.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Chart.js</span>
+                            <span class="tech-tag">Socket.io</span>
+                            <span class="tech-tag">SCSS</span>
+                        </div>
+                        <div style="margin-top: 1.5rem;">
+                            <a href="#" style="color: var(--accent-green); text-decoration: none; font-weight: 600; margin-right: 1rem;">
+                                <i class="fas fa-external-link-alt"></i> Demo Live
+                            </a>
+                            <a href="#" style="color: var(--accent-blue); text-decoration: none; font-weight: 600;">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-icon">🐳</div>
+                        <h3 class="project-title">Infrastructure DevOps</h3>
+                        <p style="margin-bottom: 1.5rem; line-height: 1.6;">
+                            Pipeline CI/CD complet avec Kubernetes, monitoring automatisé et déploiement 
+                            blue-green. Infrastructure as Code avec Terraform pour une gestion 
+                            déclarative complète.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Kubernetes</span>
+                            <span class="tech-tag">GitHub Actions</span>
+                            <span class="tech-tag">Terraform</span>
+                            <span class="tech-tag">Grafana</span>
+                            <span class="tech-tag">ArgoCD</span>
+                        </div>
+                        <div style="margin-top: 1.5rem;">
+                            <a href="#" style="color: var(--accent-purple); text-decoration: none; font-weight: 600;">
+                                <i class="fas fa-file-alt"></i> Documentation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-icon">🔐</div>
+                        <h3 class="project-title">Système d'Authentification</h3>
+                        <p style="margin-bottom: 1.5rem; line-height: 1.6;">
+                            Service d'authentification sécurisé avec OAuth 2.0, authentification à deux 
+                            facteurs et gestion fine des permissions. Support multi-tenant avec cache 
+                            Redis haute performance.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Go</span>
+                            <span class="tech-tag">JWT</span>
+                            <span class="tech-tag">OAuth 2.0</span>
+                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                        <div style="margin-top: 1.5rem;">
+                            <a href="#" style="color: var(--accent-orange); text-decoration: none; font-weight: 600; margin-right: 1rem;">
+                                <i class="fas fa-shield-alt"></i> Sécurité
+                            </a>
+                            <a href="#" style="color: var(--accent-blue); text-decoration: none; font-weight: 600;">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Restons Connectés</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center; margin-bottom: 3rem;">
+                <p style="font-size: 1.2rem; color: var(--text-secondary); line-height: 1.6;">
+                    Vous avez un projet en tête ? Une question technique ? Ou simplement envie de discuter 
+                    de technologie ? Je serais ravi d'échanger avec vous !
+                </p>
+            </div>
+            
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name" style="color: var(--accent-blue); font-weight: 600;">Votre nom</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" style="color: var(--accent-green); font-weight: 600;">Votre email</label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" style="color: var(--accent-purple); font-weight: 600;">Sujet</label>
+                        <input type="text" id="subject" name="subject" required placeholder="Collaboration, Question technique, etc.">
+                    </div>
+                    <div class="form-group">
+                        <label for="message" style="color: var(--accent-orange); font-weight: 600;">Votre message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Décrivez votre projet ou votre question..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Envoyer le message
+                    </button>
+                </form>
+            </div>
+                
+            <div style="text-align: center; margin-top: 3rem; padding-top: 3rem; border-top: 1px solid var(--glass-border);">
+                <p style="margin-bottom: 2rem; color: var(--text-secondary); font-size: 1.1rem;">
+                    Ou contactez-moi directement sur :
+                </p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; max-width: 600px; margin: 0 auto;">
+                    <a href="mailto:izayidali440@gmail.com" style="color: var(--accent-blue); text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 0.8rem; padding: 1rem; background: var(--glass); border-radius: 15px; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <i class="fas fa-envelope" style="font-size: 1.2rem;"></i>
+                        <span style="font-weight: 600;">Email</span>
+                    </a>
+                    <a href="https://github.com/ClayJense" style="color: var(--accent-green); text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 0.8rem; padding: 1rem; background: var(--glass); border-radius: 15px; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <i class="fab fa-github" style="font-size: 1.2rem;"></i>
+                        <span style="font-weight: 600;">GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ali-izayid-66584a22a" style="color: var(--accent-purple); text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 0.8rem; padding: 1rem; background: var(--glass); border-radius: 15px; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <i class="fab fa-linkedin" style="font-size: 1.2rem;"></i>
+                        <span style="font-weight: 600;">LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Bouton flottant -->
+    <button class="chat-toggle-btn" id="chatToggle">
+        <div class="robot-icon">
+            <div class="robot-antenna"></div>
+            <div class="robot-head">
+                <div class="robot-eyes">
+                    <div class="robot-eye"></div>
+                    <div class="robot-eye"></div>
+                </div>
+                <div class="robot-mouth"></div>
+            </div>
+        </div>
+    </button>
+
+    <!-- Bulle promotionnelle -->
+    <div class="chat-bubble-promo" id="promoBubble">
+        <strong>👋 Salut, je suis Nora !</strong><br>
+        <small>Clique pour découvrir mon créateur 😊</small>
+    </div>
+
+    <!-- Fenêtre du chatbot -->
+    <div class="chat-window" id="chatWindow">
+        <!-- Header -->
+        <div class="chat-header">
+            <div class="nora-avatar">
+                <div class="nora-avatar-inner">
+                    <div class="avatar-eyes">
+                        <div class="avatar-eye"></div>
+                        <div class="avatar-eye"></div>
+                    </div>
+                    <div class="avatar-smile"></div>
+                </div>
+            </div>
+            <div class="chat-header-info">
+                <h3>Nora</h3>
+                <p><span class="status-indicator"></span>En ligne</p>
+            </div>
+        </div>
+
+        <!-- Messages -->
+        <div class="chat-messages" id="chatMessages">
+            <!-- Les messages apparaîtront ici -->
+        </div>
+
+        <!-- Indicateur de saisie -->
+        <div class="typing-indicator" id="typingIndicator">
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+        </div>
+
+        <!-- Zone de saisie -->
+        <div class="chat-input-zone">
+            <input 
+                type="text" 
+                class="chat-input" 
+                id="chatInput" 
+                placeholder="Écris ton message à Nora..."
+                maxlength="1000"
+            >
+            <button class="send-btn" id="sendBtn">
+                <svg viewBox="0 0 24 24">
+                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+   
+   <script src="./script/script.js"></script>
+    <script src="./script/contact.js"></script>
+    <script src="./script/chatbot.js"></script>
+</body>
+</html>
