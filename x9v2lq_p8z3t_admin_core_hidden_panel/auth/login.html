@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - Portfolio Admin</title>
+    <link rel="stylesheet" href="../../css/login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <div class="login-header">
+                <h1>Connexion</h1>
+                <p>Accédez à votre tableau de bord</p>
+            </div>
+
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="votre@email.com"
+                        required
+                    >
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        placeholder="••••••••"
+                        required
+                    >
+                    <span class="error-message" id="passwordError"></span>
+                </div>
+
+                <div class="form-group remember-me">
+                    <label>
+                        <input type="checkbox" id="rememberMe">
+                        <span>Se souvenir de moi</span>
+                    </label>
+                </div>
+
+                <div class="alert" id="alertMessage"></div>
+
+                <button type="submit" class="btn-login" id="loginBtn">
+                    <span class="btn-text">Se connecter</span>
+                    <span class="btn-loader" style="display: none;">
+                        <span class="loader"></span>
+                    </span>
+                </button>
+            </form>
+
+            <div class="login-footer">
+                <a href="/" class="back-link">← Retour au portfolio</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../script/login.js"></script>
+</body>
+</html>

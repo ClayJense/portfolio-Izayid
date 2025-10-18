@@ -1,0 +1,60 @@
+/* Styles pour les messages d'alerte */
+.alert {
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    animation: slideIn 0.3s ease-out;
+    transition: opacity 0.3s ease;
+}
+
+.alert i {
+    font-size: 24px;
+}
+
+.alert-success {
+    background: linear-gradient(135deg, #00ff88 0%, #00cc6f 100%);
+    color: #000;
+    border-left: 4px solid #00ff88;
+    box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
+}
+
+.alert-error {
+    background: linear-gradient(135deg, #ff4757 0%, #ff3838 100%);
+    color: #fff;
+    border-left: 4px solid #ff1744;
+    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Style du bouton pendant le chargement */
+.submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.submit-btn .fa-spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

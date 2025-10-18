@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Portfolio Admin</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2><i class="fas fa-chart-line"></i> Admin Panel</h2>
+            <button class="close-sidebar" id="closeSidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div class="user-info">
+            <div class="user-avatar">
+                <i class="fas fa-user-circle"></i>
+            </div>
+            <div class="user-details">
+                <h3 id="userName">Chargement...</h3>
+                <p id="userEmail">...</p>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="#" class="nav-item active" data-section="dashboard">
+                <i class="fas fa-home"></i>
+                <span>Tableau de bord</span>
+            </a>
+            <a href="#" class="nav-item" data-section="contacts">
+                <i class="fas fa-envelope"></i>
+                <span>Messages</span>
+                <span class="badge" id="contactBadge">0</span>
+            </a>
+            <a href="#" class="nav-item" data-section="stats">
+                <i class="fas fa-chart-bar"></i>
+                <span>Statistiques</span>
+            </a>
+            <a href="#" class="nav-item" data-section="visits">
+                <i class="fas fa-eye"></i>
+                <span>Visites</span>
+            </a>
+            <a href="#" class="nav-item" data-section="profile">
+                <i class="fas fa-user"></i>
+                <span>Profil</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <button class="btn-logout" id="logoutBtn">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Déconnexion</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="top-bar">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <h1 id="pageTitle">Tableau de bord</h1>
+            <div class="header-actions">
+                <button class="btn-refresh" id="refreshBtn">
+                    <i class="fas fa-sync-alt"></i>
+                </button>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <!-- Dashboard Section -->
+            <section class="content-section active" id="dashboard-section">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon blue">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="totalVisits">0</h3>
+                            <p>Visites totales</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon green">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="totalContacts">0</h3>
+                            <p>Messages reçus</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon orange">
+                            <i class="fas fa-calendar-day"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="todayVisits">0</h3>
+                            <p>Visites aujourd'hui</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon purple">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="onlineUsers">0</h3>
+                            <p>En ligne (5 min)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="charts-grid">
+                    <div class="chart-card">
+                        <h3>Visites des 7 derniers jours</h3>
+                        <canvas id="visitsChart"></canvas>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Top 5 Pages</h3>
+                        <div id="popularPages">Chargement...</div>
+                    </div>
+                </div>
+
+                <div class="recent-activity">
+                    <h3>Activité récente</h3>
+                    <div id="recentContacts">Chargement...</div>
+                </div>
+            </section>
+
+            <!-- Contacts Section -->
+            <section class="content-section" id="contacts-section">
+                <div class="section-header">
+                    <h2>Messages de contact</h2>
+                    <button class="btn-primary" id="refreshContacts">
+                        <i class="fas fa-sync-alt"></i> Actualiser
+                    </button>
+                </div>
+                <div class="contacts-list" id="contactsList">
+                    <div class="loader">Chargement des messages...</div>
+                </div>
+            </section>
+
+            <!-- Stats Section -->
+            <section class="content-section" id="stats-section">
+                <div class="section-header">
+                    <h2>Statistiques détaillées</h2>
+                </div>
+                <div class="stats-details">
+                    <div class="stat-detail-card">
+                        <h3>Navigateurs</h3>
+                        <div id="browsersStats">Chargement...</div>
+                    </div>
+                    <div class="stat-detail-card">
+                        <h3>Appareils</h3>
+                        <div id="devicesStats">Chargement...</div>
+                    </div>
+                    <div class="stat-detail-card full-width">
+                        <h3>Visites par pays</h3>
+                        <div id="countriesStats">Chargement...</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Visits Section -->
+            <section class="content-section" id="visits-section">
+                <div class="section-header">
+                    <h2>Journal des visites</h2>
+                </div>
+                <div class="table-wrapper">
+                    <table class="data-table" id="visitsTable">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Page</th>
+                                <th>Pays</th>
+                                <th>Navigateur</th>
+                                <th>Appareil</th>
+                            </tr>
+                        </thead>
+                        <tbody id="visitsTableBody">
+                            <tr>
+                                <td colspan="5" class="text-center">Chargement...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Profile Section -->
+            <section class="content-section" id="profile-section">
+                <div class="section-header">
+                    <h2>Mon profil</h2>
+                </div>
+                <div class="profile-card">
+                    <div class="profile-info">
+                        <div class="profile-avatar-large">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <h3 id="profileName">Chargement...</h3>
+                        <p id="profileEmail">...</p>
+                        <span class="badge-role" id="profileRole">Admin</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Modal pour répondre aux messages -->
+    <div class="modal" id="replyModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Répondre au message</h3>
+                <button class="close-modal" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="message-details" id="messageDetails"></div>
+                <form id="replyForm">
+                    <input type="hidden" id="replyContactId">
+                    <div class="form-group">
+                        <label>Votre réponse</label>
+                        <textarea id="replyMessage" rows="6" placeholder="Écrivez votre réponse..."></textarea>
+                    </div>
+                    <div class="modal-actions">
+                        <button type="button" class="btn-secondary" id="cancelReply">Annuler</button>
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-paper-plane"></i> Envoyer
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/script/dashboard.js"></script>
+</body>
+</html>
