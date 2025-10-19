@@ -44,7 +44,7 @@
             "Développeur Backend Go",
             "Passionné de DevOps", 
             "Expert Linux & Docker",
-            "Créateur de solutions",
+            "Concepteur de solutions innovantes",
             "Architecte Cloud"
         ];
         let textIndex = 0;
