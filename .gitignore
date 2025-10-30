@@ -1,1 +1,11 @@
+# Ignorer tous les fichiers .txt
 *.txt
+
+# Ignorer le dossier spécifique à la racine
+/x9v2lq_p8z3t_admin_core_hidden_panel/
+
+# Ignorer le fichier cv.html à la racine
+/cv.html
+
+# Ignorer le fichier .gitignore lui-même à la racine
+/.gitignore

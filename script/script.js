@@ -41,7 +41,7 @@
 
         // Typing Animation
         const texts = [
-            "Développeur Backend Go",
+            "Développeur Backend",
             "Passionné de DevOps", 
             "Expert Linux & Docker",
             "Concepteur de solutions innovantes",
