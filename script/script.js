@@ -511,105 +511,78 @@
         Contact: izayid.ali@example.com
         `);
 
-        const certifications = {
+const certifications = {
     cert1: {
-        image: './images/cert-docker.jpg',
-        title: 'Docker Certified Associate',
-        issuer: 'Docker Inc.',
-        date: 'Mars 2024',
-        description: 'Certification officielle Docker validant la maîtrise des concepts fondamentaux et avancés de la conteneurisation.',
-        skills: [
-            'Orchestration et déploiement de containers Docker',
-            'Gestion des images et registries Docker',
-            'Mise en réseau et sécurité des containers',
-            'Volumes et gestion du stockage persistant',
-            'Docker Compose pour applications multi-containers',
-            'Monitoring et debugging des containers'
-        ],
-        link: '#'
-    },
+    image: './images/cert-licence-gl.jpg',
+    title: 'Licence Professionnelle en Génie Logiciel',
+    issuer: 'Université Dakar Bourguiba',
+    date: '2025',
+    description: 'Diplôme de Licence Professionnelle en Génie Logiciel obtenu avec la mention Très Bien. Formation complète couvrant le développement full-stack, DevOps, IA et les méthodologies modernes.',
+    skills: [
+        'Développement Full-Stack - Angular, Laravel, Flask, Java, PHP',
+        'DevOps & CI/CD - Docker, Kubernetes, GitHub Actions, déploiement',
+        'Intelligence Artificielle - Initiation ML, DL, entraînement de modèles',
+        'Administration Système - Linux, Windows, scripting Bash',
+        'Bases de données - Oracle, SQL Server, MySQL, modélisation Merise',
+        'Développement Web - HTML, CSS, JavaScript, architectures modernes',
+        'Méthodologies - Agile/Scrum, UML, génie logiciel',
+        'Sécurité & Réseaux - Sécurisation applications et infrastructures'
+    ],
+    link: 'https://udb.sn/'
+},
     cert2: {
-        image: './images/cert-kubernetes.jpg',
-        title: 'Certified Kubernetes Administrator (CKA)',
-        issuer: 'Cloud Native Computing Foundation',
-        date: 'Janvier 2024',
-        description: 'Certification reconnue mondialement validant les compétences en administration et gestion de clusters Kubernetes.',
+        image: './images/cert-stage-udb.jpg',
+        title: 'Stage Professionnel - Université Dakar Bourguiba',
+        issuer: 'Université Dakar Bourguiba',
+        date: '2025',
+        description: 'Stage réalisé au sein de l\'Université Dakar Bourguiba portant sur le développement d\'une plateforme complète de gestion des informations, administration et réseau alumni.',
         skills: [
-            'Installation et configuration de clusters Kubernetes',
-            'Gestion du cycle de vie des applications',
-            'Networking et politiques réseau',
-            'Stockage et gestion des volumes persistants',
-            'Sécurité : RBAC, Network Policies, Security Contexts',
-            'Troubleshooting et maintenance de clusters'
+            'Développement Full-Stack',
+            'Gestion de bases de données',
+            'Conception et développement d\'interfaces utilisateur',
+            'Intégration de systèmes',
+            'Gestion des utilisateurs et rôles',
+            'Développement de fonctionnalités réseaux sociaux',
+            'Optimisation des performances',
+            'Documentation technique'
         ],
-        link: '#'
+        link: 'https://udb.sn/'
     },
     cert3: {
-        image: './images/cert-golang.jpg',
-        title: 'Go Programming Expert',
-        issuer: 'Go Community',
-        date: 'Décembre 2023',
-        description: 'Certification avancée en programmation Go, couvrant les patterns, best practices et optimisations de performance.',
+        image: './images/cert-meilleur-etudiant.jpg',
+        title: 'Certificat du meilleur étudiant en L2 Informatique',
+        issuer: 'Université — Année académique 2023–2024',
+        date: '2024',
+        description: 'Récompense décernée pour avoir obtenu la meilleure moyenne du département Informatique durant l’année 2023–2024. Le certificat a également mis en avant la communauté comorienne pour ses excellents résultats académiques.',
         skills: [
-            'Maîtrise des concepts avancés du langage Go',
-            'Concurrence : goroutines, channels, sync packages',
-            'Développement d\'APIs REST performantes',
-            'Testing, benchmarking et profiling',
-            'Design patterns en Go',
-            'Optimisation de la mémoire et des performances'
+            'Excellence académique',
+            'Esprit de rigueur et de performance',
+            'Leadership étudiant',
+            'Reconnaissance institutionnelle'
         ],
         link: '#'
     },
     cert4: {
-        image: './images/cert-linux.jpg',
-        title: 'Linux Professional Institute Certification',
-        issuer: 'LPI',
-        date: 'Octobre 2023',
-        description: 'Certification professionnelle Linux couvrant l\'administration système, la sécurité et les services réseau.',
+        image: './images/cert-ibm-cloud.jpg',
+        title: 'IBM - Cloud Computing Fundamentals (Earn a Credential!)',
+        issuer: 'IBM Skills Network',
+        date: 'En cours',
+        description: 'Programme de certification professionnelle proposé par IBM, axé sur les fondamentaux du Cloud Computing. Formation couvrant les modèles de services (IaaS, PaaS, SaaS), la virtualisation, le déploiement d’applications cloud et l’impact du cloud sur l’IA et l’analyse de données.',
         skills: [
-            'Administration système Linux avancée',
-            'Gestion des services et processus',
-            'Configuration réseau et firewall',
-            'Scripting Bash et automatisation',
-            'Sécurité système et hardening',
-            'Gestion des packages et mises à jour'
+            'Fondamentaux du Cloud Computing',
+            'IaaS, PaaS, SaaS - architectures et modèles de services',
+            'Virtualisation et conteneurisation',
+            'Déploiement d’applications sur le cloud',
+            'Sécurité et gouvernance cloud',
+            'Analyse de données accélérée par le cloud',
+            'Introduction aux solutions IA sur le cloud IBM'
         ],
-        link: '#'
-    },
-    cert5: {
-        image: './images/cert-aws.jpg',
-        title: 'AWS Solutions Architect Associate',
-        issuer: 'Amazon Web Services',
-        date: 'Septembre 2023',
-        description: 'Certification AWS validant la capacité à concevoir des systèmes distribués sécurisés et évolutifs sur AWS.',
-        skills: [
-            'Architecture d\'applications cloud-native',
-            'Services AWS : EC2, S3, RDS, Lambda, ECS',
-            'Réseaux VPC, Load Balancers, Route 53',
-            'Sécurité : IAM, KMS, Security Groups',
-            'Haute disponibilité et disaster recovery',
-            'Optimisation des coûts et monitoring'
-        ],
-        link: '#'
-    },
-    cert6: {
-        image: './images/cert-gitops.jpg',
-        title: 'GitOps Fundamentals',
-        issuer: 'GitLab',
-        date: 'Août 2023',
-        description: 'Certification sur les pratiques GitOps pour automatiser les déploiements et gérer l\'infrastructure as code.',
-        skills: [
-            'Principes et méthodologies GitOps',
-            'Pipelines CI/CD avec GitLab',
-            'Infrastructure as Code (IaC)',
-            'Déploiements automatisés et rollbacks',
-            'Monitoring et observabilité',
-            'Best practices de sécurité GitOps'
-        ],
-        link: '#'
+        link: 'https://students.yourlearning.ibm.com/activity/PLAN-58FA14F64C9B?focuslmsId=MDLPT-312'
     }
+
 };
 
+// Les fonctions JavaScript restent les mêmes
 function openCertModal(certId) {
     const cert = certifications[certId];
     const modal = document.getElementById('certModal');
@@ -632,10 +605,7 @@ function openCertModal(certId) {
         </div>
         <div class="modal-footer">
             <p class="modal-date"><i class="far fa-calendar"></i> Obtenu en ${cert.date}</p>
-            <a href="${cert.link}" class="modal-link" target="_blank">
-                <i class="fas fa-external-link-alt"></i>
-                Voir le certificat
-            </a>
+            
         </div>
     `;
 

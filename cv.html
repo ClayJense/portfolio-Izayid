@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Izayid Ali | Développeur Full Stack</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="./css/cv.css">
+</head>
+<body>
+    <button class="download-floating" id="downloadBtn" onclick="telechargerPDF()">
+        <i class="fas fa-download download-text"></i>
+        <span class="download-text">Télécharger PDF</span>
+        <div class="loading-spinner"></div>
+    </button>
+
+    <div class="cv-wrapper">
+            <div class="cv-container" id="cv-content">
+                <!-- En-tête -->
+                <div class="header">
+                <div class="profile-photo">
+                    <img src="./images/ma-photo.jpg" alt="Ma photo" class="profile-image">
+                </div>
+                <div class="header-text">
+                    <h1>IZAYID ALI</h1>
+                    <div class="title">Développeur Full Stack | DevOps | Cloud Engineer</div>
+                    <div class="contact-bar">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Dakar, Sénégal</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+221 78 372 35 07</span> <!-- ton numéro ici -->
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:izayidali440@gmail.com" class="contact-link">izayidali440@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/ClayJense" class="contact-link" target="_blank">github.com/ClayJense</a>
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Contenu principal -->
+                <div class="main-content">
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <!-- Compétences -->
+                    <div class="sidebar-section">
+                    <h3 class="sidebar-title">
+                        <i class="fas fa-code"></i> Compétences
+                    </h3>
+
+                    <div class="skill-item">
+                        <div class="skill-name">
+                        <span>HTML / CSS / JavaScript</span>
+                        <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-name">
+                        <span>Laravel / PHP</span>
+                        <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-name">
+                        <span>Angular</span>
+                        <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-name">
+                        <span>React (en apprentissage)</span>
+                        <span>70%</span>
+                        </div>
+                        <div class="skill-bar">
+                        <div class="skill-progress" style="width: 70%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-name">
+                        <span>Java / Hibernate</span>
+                        <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-name">
+                        <span>Go / Gin</span>
+                        <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                        <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-name">
+                        <span>C / C++</span>
+                        <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-name">
+                        <span>Python / Flask</span>
+                        <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-name">
+                        <span>DevOps (Docker / CI-CD / K8s)</span>
+                        <span>88%</span>
+                        </div>
+                        <div class="skill-bar">
+                        <div class="skill-progress" style="width: 88%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-name">
+                        <span>Cloud (AWS / Azure)</span>
+                        <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                        <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-name">
+                        <span>Base de données (MySQL, PostgreSQL, Oracle, SQL Server)</span>
+                        <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- Langues -->
+                    <div class="sidebar-section">
+                    <h3 class="sidebar-title"><i class="fas fa-language"></i> Langues</h3>
+                    <div class="language-item"><i class="fas fa-circle"></i> <span><strong>Français</strong> - Courant</span></div>
+                    <div class="language-item"><i class="fas fa-circle"></i> <span><strong>Anglais</strong> - Intermédiaire</span></div>
+                    </div>
+
+                    <!-- Centres d'intérêt / Passions -->
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-title"><i class="fas fa-heart"></i> Passions</h3>
+                        <div class="interest-badge"><i class="fas fa-code"></i> Coding</div>
+                        <div class="interest-badge"><i class="fab fa-linux"></i> Linux</div>
+                        <div class="interest-badge"><i class="fas fa-cloud"></i> Cloud</div>
+                        <div class="interest-badge"><i class="fas fa-cogs"></i> DevOps</div>
+                        <div class="interest-badge"><i class="fas fa-brain"></i> IA</div>
+                        <div class="interest-badge"><i class="fab fa-osi"></i> Open Source</div>
+                    </div>
+
+                    <!-- Loisirs / Centres d'intérêt -->
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-title"><i class="fas fa-heart"></i> Loisirs & Intérêts</h3>
+                        
+                        <!-- Sport et voyage -->
+                        <div class="interest-badge"><i class="fas fa-football-ball"></i> Football</div>
+                        <div class="interest-badge"><i class="fas fa-plane"></i> Voyage</div>
+
+                        <!-- Automobile -->
+                        <div class="interest-badge"><i class="fas fa-car"></i> Automobile</div>
+
+                        <!-- Cinéma, séries et conférences -->
+                        <div class="interest-badge"><i class="fas fa-film"></i> Cinéma / Séries</div>
+                        <div class="interest-badge"><i class="fas fa-chalkboard-teacher"></i> Conférences / Apprentissage</div>
+
+                        <!-- Lecture / développement personnel -->
+                        <div class="interest-badge"><i class="fas fa-book"></i> Lecture & Motivation</div>
+
+                        <!-- Univers / Espace -->
+                        <div class="interest-badge"><i class="fas fa-meteor"></i> Espace & Univers</div>
+
+                        <!-- Ambition professionnelle -->
+                        <div class="interest-badge"><i class="fas fa-lightbulb"></i> Projets & Leadership</div>
+                        <div class="interest-badge"><i class="fas fa-rocket"></i> Innovation & IA</div>
+                    </div>
+                    
+                    <!-- Certifications -->
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-title"><i class="fas fa-award"></i> Distinctions</h3>
+                        <div class="distinctions-list">
+                            <div><i class="fas fa-certificate" style="color: #818cf8;"></i> <span>IBM Cloud Computing (en cours)</span></div>
+                            <div><i class="fas fa-trophy" style="color: #fbbf24;"></i> <span>Meilleur élève L2</span></div>
+                            <div><i class="fas fa-medal" style="color: #818cf8;"></i> <span>Mention TB</span></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Contenu droite -->
+                <div class="content">
+                    <!-- Profil -->
+                    <div class="content-section">
+                    <h2 class="section-title"><i class="fas fa-user-circle"></i> Profil</h2>
+                    <p class="profile-text">
+                        Développeur Full Stack passionné, spécialisé backend tout en ayant de solides compétences frontend. 
+                        Je maîtrise PHP, Python, Java, C, C++ et Go, ainsi que les frameworks Laravel, Gin et Hibernate.  
+                        Je possède également des compétences avancées en DevOps (Docker, Kubernetes, Git, GitHub) et cloud computing, avec une bonne connaissance des principaux fournisseurs tels que OVH, Hostinger, LWS, et la capacité à m’adapter rapidement à IBM Cloud ou AWS.  
+                        Intéressé par l’IA et l’analyse de données, je relève avec enthousiasme de nouveaux défis techniques.  
+                        Actuellement co-fondateur de l’agence BIAcode et en cours de certification IBM Cloud Computing.
+                    </p>
+                    </div>
+
+                    <!-- Expérience -->
+                    <div class="content-section">
+                        <h2 class="section-title">
+                            <i class="fas fa-briefcase"></i>
+                            Expérience
+                        </h2>
+                        <div class="timeline-item">
+                            <div class="timeline-title">Développeur Full Stack - Stagiaire</div>
+                            <div class="timeline-date"><i class="fas fa-calendar"></i> juillet - Août 2025 | Université Dakar Bourguiba</div>
+                            <div class="timeline-desc">
+                                Développement et déploiement du site officiel (udb.sn) : Backend Laravel, Frontend Angular, hébergement OVH. Gestion administration et contenus.
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-title">Co-fondateur - Agence BIA Code</div>
+                            <div class="timeline-date"><i class="fas fa-calendar"></i> 2025 - Présent</div>
+                            <div class="timeline-desc">
+                                Freelance tech : développement web, automatisation, gestion cloud. Services pour PME et startups.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projets -->
+                    <div class="content-section">
+                        <h2 class="section-title">
+                            <i class="fas fa-project-diagram"></i>
+                            Projets Clés
+                        </h2>
+                        <br>
+                        <!-- Site Université UDB -->
+                        <div class="project-item">
+                            <div class="project-title"><i class="fas fa-university"></i> Site Université UDB</div>
+                            <div class="project-desc">Site institutionnel complet avec CMS et espace admin. Équipe de 4 développeurs, j'étais chef du projet.</div>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Laravel</span>
+                                <span class="tech-tag">Angular</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">OVH</span>
+                            </div>
+                        </div>
+
+                        <!-- Chatbot IA -->
+                        <div class="project-item">
+                            <div class="project-title"><i class="fas fa-robot"></i> Chatbot IA</div>
+                            <div class="project-desc">Prototype de chatbot intelligent avec NLP et intégration API IA pour automatisation des réponses.</div>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Flask</span>
+                                <span class="tech-tag">API REST</span>
+                                <span class="tech-tag">HTML/CSS/JS</span>
+                                <span class="tech-tag">Render</span>
+                            </div>
+                        </div>
+
+                        <!-- Biacode -->
+                        <div class="project-item">
+                            <div class="project-title"><i class="fas fa-code"></i> Biacode</div>
+                            <div class="project-desc">Plateforme collaborative et services digitaux, co-fondée et développée avec 2 associés. Gestion full-stack et hébergement cloud.</div>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Laravel</span>
+                                <span class="tech-tag">Angular</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">LWS</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                   <!-- Formation -->
+                    <div class="content-section">
+                        <h2 class="section-title">
+                            <i class="fas fa-graduation-cap"></i>
+                            Formation
+                        </h2>
+
+                        <!-- Licence Génie Logiciel -->
+                        <div class="timeline-item">
+                            <div class="timeline-title">Licence Professionnelle en Génie Logiciel</div>
+                            <div class="timeline-date"><i class="fas fa-calendar"></i> 2022-2025 | Université Dakar Bourguiba (UDB)</div>
+                            <div class="timeline-desc">
+                                <strong>Mention Très Bien</strong> - Spécialisation : développement web full-stack (Laravel, Java, Angular), architecture systèmes, DevOps, cloud computing et introduction à l’IA.
+                            </div>
+                        </div>
+
+                        <!-- Baccalauréat -->
+                        <div class="timeline-item">
+                            <div class="timeline-title">Baccalauréat A1</div>
+                            <div class="timeline-date"><i class="fas fa-calendar"></i> 2021</div>
+                        </div>
+                    </div>
+
+
+                    <!-- Technologies -->
+                    <div class="content-section">
+                        <h2 class="section-title">
+                            <i class="fas fa-tools"></i>
+                            Stack Technique
+                        </h2>
+                        <div class="tech-grid">
+                            <div class="tech-item">
+                                <i class="fab fa-laravel"></i>
+                                <div class="tech-name">Laravel</div>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-angular"></i>
+                                <div class="tech-name">Angular</div>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-docker"></i>
+                                <div class="tech-name">Docker</div>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-python"></i>
+                                <div class="tech-name">Python</div>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-aws"></i>
+                                <div class="tech-name">AWS</div>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-git-alt"></i>
+                                <div class="tech-name">Git</div>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-linux"></i>
+                                <div class="tech-name">Linux</div>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-database"></i>
+                                <div class="tech-name">MySQL</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ <script src="./script/cv.js"></script>
+
+</body>
+</html>

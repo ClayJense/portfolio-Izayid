@@ -69,9 +69,9 @@
             
             <!-- Boutons CTA -->
             <div class="cta-buttons">
-                <a href="./cv/Izayid_Ali_CV.pdf" download class="btn-cv">
-                    <i class="fas fa-download"></i>
-                    Télécharger CV
+                <a href="./cv.html" target="_blank" class="btn-cv">
+                    <i class="fas fa-eye"></i>
+                    Voir CV
                 </a>
                 <a href="#contact" class="btn-secondary">
                     <i class="fas fa-envelope"></i>
@@ -218,7 +218,7 @@
                                 </svg>
                             </div>
                             <div style="color: var(--accent-green); font-weight: 600; font-size: 1.1rem; margin-bottom: 0.3rem;">Certifications</div>
-                            <div style="font-size: 0.9rem; color: var(--text-secondary);">6+ Certifiées</div>
+                            <div style="font-size: 0.9rem; color: var(--text-secondary);">3 Certifiées</div>
                         </div>
                         
                         <!-- Projets -->
@@ -236,7 +236,7 @@
                                 </svg>
                             </div>
                             <div style="color: var(--accent-orange); font-weight: 600; font-size: 1.1rem; margin-bottom: 0.3rem;">Projets</div>
-                            <div style="font-size: 0.9rem; color: var(--text-secondary);">15+ Réalisés</div>
+                            <div style="font-size: 0.9rem; color: var(--text-secondary);">4 Réalisés</div>
                         </div>
                     </div>
                 </div>
@@ -503,91 +503,55 @@
     </div>
 </section>
 
-<style>
-/* Amélioration pour les logos de compétences */
-.skill-name span:first-child {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
 
-.skill-name img {
-    transition: transform 0.3s ease;
-}
+   <section id="certifications" class="section">
+    <div class="container">
+        <h2 class="section-title">Certifications</h2>
+        <p class="section-subtitle">Mes certifications académiques et validations de compétences</p>
 
-.skill-item:hover .skill-name img {
-    transform: scale(1.2) rotate(5deg);
-}
-</style>
-
-    <section id="certifications" class="section">
-        <div class="container">
-            <h2 class="section-title">Certifications</h2>
-            <p class="section-subtitle">Mes certifications professionnelles et validations de compétences</p>
-
-            <div class="certifications-grid">
-            <!-- Certification 1 -->
+        <div class="certifications-grid">
+            <!-- Licence Professionnelle GL -->
             <div class="cert-card" onclick="openCertModal('cert1')">
-                <img src="./images/cert-docker.jpg" alt="Docker Certified" class="cert-image">
+                <img src="./images/cert-licence-gl.jpg" alt="Licence Professionnelle GL" class="cert-image">
                 <div class="cert-content">
-                    <h3 class="cert-title">Docker Certified Associate</h3>
-                    <p class="cert-issuer">Docker Inc.</p>
-                    <p class="cert-date"><i class="far fa-calendar"></i> Mars 2024</p>
+                    <h3 class="cert-title">Licence Professionnelle GL</h3>
+                    <p class="cert-issuer">Université Dakar Bourguiba</p>
+                    <p class="cert-date"><i class="far fa-calendar"></i> 2025</p>
                 </div>
             </div>
 
-            <!-- Certification 2 -->
+            <!-- Stage à l'Université Dakar Bourguiba -->
             <div class="cert-card" onclick="openCertModal('cert2')">
-                <img src="./images/cert-kubernetes.jpg" alt="CKA" class="cert-image">
+                <img src="./images/cert-stage-udb.jpg" alt="Stage UDB" class="cert-image">
                 <div class="cert-content">
-                    <h3 class="cert-title">Certified Kubernetes Admin</h3>
-                    <p class="cert-issuer">CNCF</p>
-                    <p class="cert-date"><i class="far fa-calendar"></i> Janvier 2024</p>
+                    <h3 class="cert-title">Certificat de Stage</h3>
+                    <p class="cert-issuer">Université Dakar Bourguiba</p>
+                    <p class="cert-date"><i class="far fa-calendar"></i> 2025</p>
                 </div>
             </div>
 
-            <!-- Certification 3 -->
+            <!-- Meilleur Élève de L3 -->
             <div class="cert-card" onclick="openCertModal('cert3')">
-                <img src="./images/cert-golang.jpg" alt="Go Expert" class="cert-image">
+                <img src="./images/cert-meilleur-etudiant.jpg" alt="Certificat meilleur étudiant L2 Informatique" class="cert-image">
                 <div class="cert-content">
-                    <h3 class="cert-title">Go Programming Expert</h3>
-                    <p class="cert-issuer">Go Community</p>
-                    <p class="cert-date"><i class="far fa-calendar"></i> Décembre 2023</p>
+                    <h3 class="cert-title">Certificat du meilleur étudiant en L2 Informatique</h3>
+                    <p class="cert-issuer">Université — Année académique 2023–2024</p>
+                    <p class="cert-date"><i class="far fa-calendar"></i> 2024</p>
                 </div>
             </div>
 
-            <!-- Certification 4 -->
+            <!-- Certification IBM Cloud Computing -->
             <div class="cert-card" onclick="openCertModal('cert4')">
-                <img src="./images/cert-linux.jpg" alt="LPI" class="cert-image">
+                <img src="./images/cert-ibm-cloud.jpg" alt="IBM Cloud Computing Fundamentals" class="cert-image">
                 <div class="cert-content">
-                    <h3 class="cert-title">Linux Professional Institute</h3>
-                    <p class="cert-issuer">LPI</p>
-                    <p class="cert-date"><i class="far fa-calendar"></i> Octobre 2023</p>
-                </div>
-            </div>
-
-            <!-- Certification 5 -->
-            <div class="cert-card" onclick="openCertModal('cert5')">
-                <img src="./images/cert-aws.jpg" alt="AWS" class="cert-image">
-                <div class="cert-content">
-                    <h3 class="cert-title">AWS Solutions Architect</h3>
-                    <p class="cert-issuer">Amazon Web Services</p>
-                    <p class="cert-date"><i class="far fa-calendar"></i> Septembre 2023</p>
-                </div>
-            </div>
-
-            <!-- Certification 6 -->
-            <div class="cert-card" onclick="openCertModal('cert6')">
-                <img src="./images/cert-gitops.jpg" alt="GitOps" class="cert-image">
-                <div class="cert-content">
-                    <h3 class="cert-title">GitOps Fundamentals</h3>
-                    <p class="cert-issuer">GitLab</p>
-                    <p class="cert-date"><i class="far fa-calendar"></i> Août 2023</p>
+                    <h3 class="cert-title">IBM - Cloud Computing Fundamentals</h3>
+                    <p class="cert-issuer">IBM Skills Network</p>
+                    <p class="cert-date"><i class="far fa-calendar"></i> En cours</p>
                 </div>
             </div>
         </div>
-        </div>
-    </section>
+    </div>
+</section>
     <div id="certModal" class="cert-modal">
         <div class="modal-content">
             <span class="modal-close" onclick="closeCertModal()">&times;</span>
@@ -597,114 +561,90 @@
 
 
     <!-- Projects Section -->
-    <section id="projets" class="section">
-        <div class="container">
-            <h2 class="section-title">Mes Projets</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-content">
-                        <div class="project-icon">🌐</div>
-                        <h3 class="project-title">API REST Microservices</h3>
-                        <p style="margin-bottom: 1.5rem; line-height: 1.6;">
-                            Architecture microservices complète développée en Go avec authentification JWT, 
-                            rate limiting et monitoring en temps réel. Déployée avec Docker Swarm pour 
-                            une scalabilité optimale.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Go</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">Redis</span>
-                            <span class="tech-tag">Prometheus</span>
-                        </div>
-                        <div style="margin-top: 1.5rem;">
-                            <a href="#" style="color: var(--accent-blue); text-decoration: none; font-weight: 600;">
-                                <i class="fab fa-github"></i> Voir le code
-                            </a>
-                        </div>
-                    </div>
-                </div>
+   <section id="projets" class="section">
+    <div class="container">
+        <h2 class="section-title">Mes Projets</h2>
+        <div class="projects-grid">
 
-                <div class="project-card">
-                    <div class="project-content">
-                        <div class="project-icon">📊</div>
-                        <h3 class="project-title">Dashboard Analytics</h3>
-                        <p style="margin-bottom: 1.5rem; line-height: 1.6;">
-                            Interface d'administration moderne avec Angular, visualisation de données 
-                            en temps réel, gestion des utilisateurs et système de notifications push. 
-                            Design responsive et accessible.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Angular</span>
-                            <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag">Chart.js</span>
-                            <span class="tech-tag">Socket.io</span>
-                            <span class="tech-tag">SCSS</span>
-                        </div>
-                        <div style="margin-top: 1.5rem;">
-                            <a href="#" style="color: var(--accent-green); text-decoration: none; font-weight: 600; margin-right: 1rem;">
-                                <i class="fas fa-external-link-alt"></i> Demo Live
-                            </a>
-                            <a href="#" style="color: var(--accent-blue); text-decoration: none; font-weight: 600;">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                        </div>
+            <!-- Projet 1 : Plateforme de l'université UDB -->
+            <div class="project-card">
+                <div class="project-content">
+                    <div class="project-icon">🎓</div>
+                    <h3 class="project-title">Plateforme Universitaire - UDB</h3>
+                    <p style="margin-bottom: 1.5rem; line-height: 1.6;">
+                        Projet réalisé en équipe de quatre développeurs dans le cadre d’un stage universitaire. 
+                        J’ai dirigé le projet en tant que chef d’équipe et développeur principal pour la conception 
+                        et le développement de la plateforme officielle de l’Université de Dakar Bourguiba (UDB).  
+                        Cette plateforme permet la gestion des inscriptions, des notes, des emplois du temps et 
+                        facilite la communication entre étudiants et enseignants.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Angular</span>
+                        <span class="tech-tag">Laravel</span>
+                        <span class="tech-tag">MySQL</span>
                     </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-content">
-                        <div class="project-icon">🐳</div>
-                        <h3 class="project-title">Infrastructure DevOps</h3>
-                        <p style="margin-bottom: 1.5rem; line-height: 1.6;">
-                            Pipeline CI/CD complet avec Kubernetes, monitoring automatisé et déploiement 
-                            blue-green. Infrastructure as Code avec Terraform pour une gestion 
-                            déclarative complète.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Kubernetes</span>
-                            <span class="tech-tag">GitHub Actions</span>
-                            <span class="tech-tag">Terraform</span>
-                            <span class="tech-tag">Grafana</span>
-                            <span class="tech-tag">ArgoCD</span>
-                        </div>
-                        <div style="margin-top: 1.5rem;">
-                            <a href="#" style="color: var(--accent-purple); text-decoration: none; font-weight: 600;">
-                                <i class="fas fa-file-alt"></i> Documentation
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-content">
-                        <div class="project-icon">🔐</div>
-                        <h3 class="project-title">Système d'Authentification</h3>
-                        <p style="margin-bottom: 1.5rem; line-height: 1.6;">
-                            Service d'authentification sécurisé avec OAuth 2.0, authentification à deux 
-                            facteurs et gestion fine des permissions. Support multi-tenant avec cache 
-                            Redis haute performance.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Go</span>
-                            <span class="tech-tag">JWT</span>
-                            <span class="tech-tag">OAuth 2.0</span>
-                            <span class="tech-tag">Redis</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                        </div>
-                        <div style="margin-top: 1.5rem;">
-                            <a href="#" style="color: var(--accent-orange); text-decoration: none; font-weight: 600; margin-right: 1rem;">
-                                <i class="fas fa-shield-alt"></i> Sécurité
-                            </a>
-                            <a href="#" style="color: var(--accent-blue); text-decoration: none; font-weight: 600;">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                        </div>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="https://udb.sn/" target="_blank" style="color: var(--accent-green); text-decoration: none; font-weight: 600;">
+                            <i class="fas fa-external-link-alt"></i> Voir le site
+                        </a>
                     </div>
                 </div>
             </div>
+
+            <!-- Projet 2 : Chatbot IA Nora -->
+            <div class="project-card">
+                <div class="project-content">
+                    <div class="project-icon">🤖</div>
+                    <h3 class="project-title">Nora IA - Chatbot Intelligent</h3>
+                    <p style="margin-bottom: 1.5rem; line-height: 1.6;">
+                        Projet personnel que j’ai entièrement conçu et développé. 
+                        <strong>Nora IA</strong> est un chatbot intelligent capable d’interagir naturellement 
+                        avec les utilisateurs grâce à une interface simple et intuitive.  
+                        L’application est propulsée par Flask et déployée sur Render.  
+                        Ce projet démontre mon savoir-faire en développement web et en intégration d’intelligence artificielle.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Flask</span>
+                    </div>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="https://noraia.onrender.com/" target="_blank" style="color: var(--accent-green); text-decoration: none; font-weight: 600;">
+                            <i class="fas fa-external-link-alt"></i> Voir le site
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projet 3 : Agence BIAcode -->
+            <div class="project-card">
+                <div class="project-content">
+                    <div class="project-icon">💻</div>
+                    <h3 class="project-title">BIAcode - Agence Digitale</h3>
+                    <p style="margin-bottom: 1.5rem; line-height: 1.6;">
+                        Je suis cofondateur de <strong>BIAcode</strong>, une agence digitale fondée à trois développeurs passionnés.  
+                        Nous concevons et développons des sites web modernes, des plateformes sur mesure 
+                        et des solutions basées sur l’intelligence artificielle pour les entreprises et les particuliers.  
+                        Je m’occupe principalement du développement front-end et de l’intégration avec Laravel côté back-end.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Angular</span>
+                        <span class="tech-tag">Laravel</span>
+                        <span class="tech-tag">MySQL</span>
+                    </div>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="https://www.biacode.tech/" target="_blank" style="color: var(--accent-green); text-decoration: none; font-weight: 600;">
+                            <i class="fas fa-external-link-alt"></i> Voir le site
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Contact Section -->
     <section id="contact" class="section">
